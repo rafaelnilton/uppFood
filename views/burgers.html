@@ -1,0 +1,15 @@
+<li ng-repeat="prato in dados.food | filter: searchFood | filter: 'burgers' as results" ng-click="pedidoRealizado(prato.title, prato.price)">
+
+
+  <img src="images/hamburguer.png">
+
+  <div class="descricao">
+
+    <h3>{{prato.title}}</h3>
+    <h4>{{prato.price | currency}}</h4>
+    <button>adicionar</button>
+
+  </div>
+</li>
+
+<h2 ng-show="results.length < 1">{{results.length}} Results</h2>

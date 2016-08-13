@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* Folha de Estilo referente ao Site da UppFood */
+
+@media only screen and (max-width: 1980px){
+   
+}
+
+@media only screen and (max-width: 1680px){
+   
+}
+@media only screen and (min-width: 1680px){    
+    
+}
+
+
+@media only screen and (max-width: 1336px){
+    
+}
+
+@media only screen and (max-width: 1024px){
+    
+    #lista-pratos li {
+        width: 45%;
+        margin-bottom: 3%;
+    }
+        #lista-pratos li .descricao h3 {
+            font-size: 14px;
+        }
+    
+    #pedidosRapidos {
+        width: 68%;
+    }
+    #total {
+        width: 30%;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    
+    
+    
+    header #logo{
+        float: left;
+        width: 20%;
+        height: 40px;
+        background: url("../images/logoMobile.png") no-repeat;
+        background-size: 100%;
+        margin-top: 29px;
+        margin-left: 2%;
+        position: absolute;
+    }
+    
+    header nav {
+        width: 70%;
+    }
+
+    #lista-pratos li {
+        width: 95%;
+    }
+    header nav ul li {
+        width: 20%;
+    }
+        header nav ul li img {
+            float: left;
+            width: 100%;
+        }
+    
+    
+    #conteudo {
+        width: 70%;
+    }
+    
+    #conteudo #filtro img#icon-lupa {
+        margin-left: 3%;
+        margin-right: 1.5%;
+    }
+    
+    #conteudo #filtro #buscar-local {
+        width: 67%;
+    }
+    
+    #pedidosRapidos {
+        width: 98%;
+    }
+    
+    #btPagar {
+        padding: 2%;
+        font-size: 18px;
+    }
+    
+    #listaPedidos ul li p {
+        font-size: 12px;
+    }
+    
+    .bt-pedido {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        margin: 2px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 540px){
+    
+    #conteudo {
+        margin-top: 90px;
+    }
+    
+    h2 {
+        font: 19px "Lato";
+    }
+    
+    #conteudo {
+        width: 60%;
+    }
+    #total {
+        width: 40%;
+    }
+    
+    #lista-pratos li img {
+        width: 100%;
+    }
+    
+    #lista-pratos li .descricao {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    #btPagar {
+        padding: 4%;
+        font-size: 15px;
+    }
+    
+    #listaPedidos ul li p {
+        font-size: 10px;
+    }
+    
+    .bt-pedido {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+        margin: 2px;
+    }
+    
+}
+ 
+
+@media only screen and (max-width: 440px){ 
+    
+    header {
+        height: 75px;
+    }
+
+}
+
+
+@media only screen and (max-width: 440px){
+    
+}
