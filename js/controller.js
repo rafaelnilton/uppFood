@@ -9,7 +9,7 @@
 
 
 	/**
-	 * @name calculadoraControllers
+	 * @name FoodControllers
 	 * 
 	 */
 
@@ -19,9 +19,9 @@
         
         $scope.total = 0;
         $scope.pedidos = [];
-        $scope.numPedido = 0;
+        $scope.pedidosBackup = [];
+        
 
-        $scope.novoPedido = [];
         $scope.pedidoRealizado = pedidoRealizado;
         $scope.cancelarPedido = cancelarPedido;
         $scope.menosPedido = menosPedido;
@@ -30,6 +30,7 @@
         $scope.pagamentoFinal = pagamentoFinal;
         $scope.dados = null;
         $scope.getdados = getDados();
+        var numPedido = 0;
         
         $scope.getData = getData();
 
@@ -54,22 +55,22 @@
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
-                    $scope.novoPedido = {
-                        index       : $scope.numPedido,
+                    var novoPedido = {
+                        index       : numPedido,
                         produto     : produto,
                         valor       : valor,
                         quantidade  : 1
                     };
-                    $scope.pedidos.push($scope.novoPedido);
+                    $scope.pedidosBackup.push(novoPedido);
+                    $scope.pedidos = angular.copy($scope.pedidosBackup);
                     var i;
                     $scope.total = 0;
                     for(i=0; i < $scope.pedidos.length; i++) {
                         $scope.total += parseFloat($scope.pedidos[i].valor);
                     }
-                    
-                    $scope.numPedido++;
+                    numPedido++;
+                    $scope.$apply();
                     save();
-                    $rootScope.$apply();
                     swal("Done!", "", "success");
                 } else {
                     swal("Canceled!", "", "error");
@@ -99,6 +100,7 @@
                     for(y=0; y < $scope.pedidos.length; y++) {
                         $scope.total += parseFloat($scope.pedidos[y].valor);
                     }
+                    $scope.$apply();
                     save();
                 } else {
                     swal("Canceled!", "", "error");

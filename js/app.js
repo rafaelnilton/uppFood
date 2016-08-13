@@ -2,38 +2,48 @@
 	'use strict';
     var app = angular
       .module('foodApp', [
-        'ngRoute',
+        'ui.router',
         'foodControllers'
       ])
 
-    .config(function($routeProvider) {
-      $routeProvider
-        .when('/', {
-          templateUrl: 'views/default.html',
-          controller: 'FoodControllers'
+    .config(function($stateProvider, $urlRouterProvider) {
+        
+        
+      // For any unmatched url, redirect to /state1
+      $urlRouterProvider.otherwise("/home");
+        
+        
+        // Now set up the states
+        $stateProvider
+        .state('home', {
+          url: "/",
+          templateUrl: "views/default.html"
         })
-        .when('/burgers', {
-          templateUrl: 'views/burgers.html',
-          controller: 'FoodControllers'
+        .state('chinese', {
+          url: "/chinese",
+          templateUrl: "views/chinese.html"
         })
-        .when('/salad', {
-          templateUrl: 'views/salad.html',
-          controller: 'FoodControllers'
+        .state('burgers', {
+          url: "/burgers",
+          templateUrl: "views/burgers.html"
         })
-        .when('/cake', {
-          templateUrl: 'views/cake.html',
-          controller: 'FoodControllers'
+        .state('salad', {
+          url: "/salad",
+          templateUrl: "views/salad.html"
         })
-        .when('/pizza', {
-          templateUrl: 'views/pizza.html',
-          controller: 'FoodControllers'
+        
+        .state('cake', {
+          url: "/cake",
+          templateUrl: "views/cake.html"
         })
-        .when('/chinese', {
-          templateUrl: 'views/chinese.html',
-          controller: 'FoodControllers'
-        }).otherwise({
-          redirectTo: '/'
+        
+        .state('pizza', {
+          url: "/pizza",
+          templateUrl: "views/pizza.html"
         });
+        
+        
+     
     });
     
 })();
