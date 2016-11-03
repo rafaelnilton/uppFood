@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* Folha de Estilo referente ao Site da UppFood */
+
+
+body
+{
+    margin: 0 auto;
+    font-size: 100% !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+body a
+{
+    text-decoration: none;
+}
+
+.centro
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+    display: block;
+}
+
+.centroMenu
+{
+    margin: 0 auto;
+    width: 572px;
+    display: block;
+}
+
+/*----------------------------------- FONTS ------------------------------------*/
+
+
+::-webkit-input-placeholder {
+   color: #333;
+}
+
+:-moz-placeholder {
+   color: #333;
+}
+
+::-moz-placeholder {
+   color: #333;  
+}
+
+:-ms-input-placeholder {  
+   color: #333;  
+}
+
+
+h1 {
+    float: left;
+    width: 98%;
+    font: 25px "Lato";
+    color: #333;
+    margin-top: 20px;
+    padding-left: 2%;
+}
+
+
+h2 {
+    float: left;
+    width: 99%;
+    font: 25px "Lato";
+    color: #333;
+    margin-top: 20px;
+    margin-left: 1%;
+    font-weight: 700;
+}
+
+/*---------------------------Classes padrões----------------------------*/
+
+.centro-planos{
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*----------------------------------Topo--------------------------------------*/
+
+#transportes {
+    float: left;
+    display: none;
+}
+
+header{
+    float: left;
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    display: block;
+    z-index: 999;
+    background: #D81D29;
+}
+
+        header #logo{
+            float: left;
+            width: 129px;
+            height: 100px;
+            background: url("../images/logo.png") no-repeat;
+            margin-top: 15px;
+            margin-left: 2%;
+            position: absolute;
+        }
+     
+        
+        header nav{
+            float: right;
+            width: auto;
+            height: 54px;
+            z-index: 1;
+            display: block;
+            margin-top: 10px;
+            margin-right: 2%;
+        }
+            header nav ul {
+                float: right;
+                width: auto;
+            }
+                    header nav ul li{
+                        float: left;
+                        width: auto;
+                        height: 39px;
+                        color: black;
+                        text-align: center;
+                        font: 25px "Lato";
+                        padding-top: 10px;
+                        cursor: pointer;
+                        display: inline-block;
+                        color: #111111;
+                    }
+                    header nav ul li.active{
+                        background: #17A7D1;
+                        color: white;
+                    }
+                    header nav ul li.active:hover{
+                        color: #111111 !important;
+                    }
+                    header nav ul li:hover{
+                        margin-top: -10px;
+                        opacity:0.7;
+                        transition: all 0.4s;
+                        -webkit-transition: all 0.4s;
+                        -moz-transition: all 0.4s;
+                    }
+
+                    header nav ul #menuMobile {
+                        margin-top: 20px;
+                    }
+
+
+#conteudo {
+    float: left;
+    width: 100%;
+    margin-top: 150px;
+}
+    #conteudo #filtro {
+        float: left;
+        width: 100%;
+    }
+        #conteudo #filtro img#icon-lupa {
+            float: left;
+            margin-left: 20%;
+            margin-right: 0.5%;
+            margin-top: 5px;
+        }
+
+        #conteudo #filtro #buscar-local {
+            float: left;
+            width: 40%;
+            height: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+
+#pedidosRapidos {
+    float: left;
+    width: 78%;
+    margin-left: 2%;
+}
+
+
+#listaPedidos {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+}
+    #listaPedidos ul {
+        float: left;
+        width: 100%;
+    }
+        #listaPedidos ul li {
+            float: left;
+            width: 100%;
+            border-top: 1px dashed #333;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 8px;
+            padding-top: 8px;
+        }
+        #listaPedidos ul li p {
+            float: left;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+
+.cancelar {
+    float: left;
+    color: white;
+    cursor: pointer;
+    font-family: Arial;
+    padding-top: 2px;
+    z-index: 9999;
+    background: #D81D29;
+}
+.mais {
+    float: left;
+    color: white;
+    cursor: pointer;
+    font-family: Arial;
+    padding-top: 2px;
+    z-index: 9999;
+    background: #11a215;
+}
+.menos {
+    float: left;
+    color: white;
+    cursor: pointer;
+    font-family: Arial;
+    padding-top: 2px;
+    z-index: 9999;
+    background: #333;
+}
+
+.bt-pedido {
+    float: right;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 0;
+    margin: 2px;
+}
+
+#lista-pratos {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px !important;
+    font-weight:bold;
+}
+    #lista-pratos li {
+        float: left;
+        width: 40%;
+        margin: 1%;
+        margin-right: 4%;
+    }
+        #lista-pratos li img {
+            float: left;
+            width: 50%;
+        }
+        #lista-pratos li .descricao {
+            float: left;
+            width: 50%;
+        }
+        #lista-pratos li .descricao h3 {
+            float: left;
+            width: 100%;
+            text-align: left;
+            color: #333;
+            font-size: 16px;
+            font-weight: 700;
+            padding-left: 4%;
+        }
+        #lista-pratos li .descricao h4 {
+            float: right;
+            width: 100%;
+            color: #6b6b6b;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: right;
+            margin-top: 20px;
+        }
+        #lista-pratos li .descricao button {
+            float: right;
+            width: auto;
+            color: white;
+            background: #11a215;
+            font-size: 15px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            font-weight: 700;
+            height: 35px;
+            color: white;
+            margin-top: 5%;
+            padding: 2%;
+            border: 0;
+        }
+
+
+
+
+#total{
+    float: right;
+    background: #e2e2e2;
+    width: 19%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    font-size:18px !important;
+    font-weight:bold;
+}
+    #titlePR{
+        margin-top: 125px;
+        margin-left: 2%;
+        width: 98%;
+        text-align: center;
+        color: white;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .pr {
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: #ccc;
+        font: 13px "Lato";
+        margin-bottom: 5px;
+    }
+    #linhaTotal{
+        float: left;
+        text-align: right;
+        width: 94%;
+        margin-left: 2%;
+        bottom: 2%;
+        position: absolute;
+        color: #333;
+        margin-right: 2%;
+    }
+    #btPagar {
+        float: right;
+        background: #11a215;
+        color: white;
+        text-align: center;
+        border: 0;
+        padding: 8%;
+        bottom: 5%;
+        cursor: pointer;
+        height: 50px;
+        line-height: 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .btDesativado {
+        opacity: 0.3;
+    }
+
+#telaPagamentos {
+    float: left;
+    width: 100%;
+    display: none;
+}
+    #telaPagamentos h2 {
+        margin-bottom: 20px;
+    }
+
+    #telaPagamentos input{
+        margin-top: 0.5%;
+        float: left;
+        width: 98%;
+        height: 40px;
+        padding-left: 1%;
+        border: 1px solid #BBBBBB;
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 14px;
+        color: #222222;
+        margin-bottom: 10px;
+        margin-left: 1%;
+    }
+    
+    #btConfirmaPg {
+        float: right;
+        margin-right: 1%;
+        border: 0;
+        width: 112px;
+        height: 40px;
+        background: #00B2B2;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 60px;
+    }
+
+#info {
+    float: left;
+    width: 100%;
+    min-height: 400px;
+    display: none;
+     font-size: 14px !important;
+}
+    #info p {
+        float: left;
+        width: 96%;
+        margin-left: 2%;
+        margin-bottom: 10px;
+    }
+
+.tituloJanela{
+    float: left;
+    width: 98%;
+    font: 20px "Lato";
+    color: #00B2B2;
+    margin-top: 20px;
+    padding-left: 2%;
+    margin-bottom: 20px;
+} 
