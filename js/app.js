@@ -16,7 +16,7 @@
         // Now set up the states
         $stateProvider
         .state('home', {
-          url: "/",
+          url: "/home",
           templateUrl: "views/default.html"
         })
         .state('chinese', {
